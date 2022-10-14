@@ -9,7 +9,7 @@ const PranGroup = () => {
         .then(data => setProducts(data))
     },[])
     return (
-        <div className='grid grid-cols-4 gap-4 justify-items-center'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mt-5 gap-4 justify-items-center'>
             
             {
                 products.map(product=> <Card key={product._id} product={product}></Card>)
