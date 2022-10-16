@@ -1,37 +1,50 @@
 [
   {
-    "img": "https://res.cloudinary.com/sadagar/image/upload/v1579002247/products/2299/3a7551cd-ea39-401b-8432-c8c310518d76.jpg",
-    "name": "lacchi shemai",
-    "price": 35,
-    "product-quantity": 50,
+    "img": "https://chaldn.com/_mpimage/muskan-salt-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D94913&q=best&v=1",
+    "name": "muskan salt",
+    "group": "sa",
+    "price": 60,
+    "product_quantity": 50,
     "measurement": 250
   },
   {
-    "img": "https://res.cloudinary.com/sadagar/image/upload/v1579002247/products/2299/3a7551cd-ea39-401b-8432-c8c310518d76.jpg",
-    "name": "lacchi shemai",
-    "price": 35,
-    "product-quantity": 50,
+    "img": "https://chaldn.com/_mpimage/muskan-salt-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D94913&q=best&v=1",
+    "name": "muskan salt",
+    "group": "sa",
+    "price": 60,
+    "product_quantity": 50,
     "measurement": 250
   },
   {
-    "img": "https://res.cloudinary.com/sadagar/image/upload/v1579002247/products/2299/3a7551cd-ea39-401b-8432-c8c310518d76.jpg",
-    "name": "lacchi shemai",
-    "price": 35,
-    "product-quantity": 50,
+    "img": "https://chaldn.com/_mpimage/muskan-salt-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D94913&q=best&v=1",
+    "name": "muskan salt",
+    "group": "sa",
+    "price": 60,
+    "product_quantity": 50,
     "measurement": 250
   },
   {
-    "img": "https://res.cloudinary.com/sadagar/image/upload/v1579002247/products/2299/3a7551cd-ea39-401b-8432-c8c310518d76.jpg",
-    "name": "lacchi shemai",
-    "price": 35,
-    "product-quantity": 50,
+    "img": "https://chaldn.com/_mpimage/muskan-salt-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D94913&q=best&v=1",
+    "name": "muskan salt",
+    "group": "sa",
+    "price": 60,
+    "product_quantity": 50,
     "measurement": 250
   },
   {
-    "img": "https://res.cloudinary.com/sadagar/image/upload/v1579002247/products/2299/3a7551cd-ea39-401b-8432-c8c310518d76.jpg",
-    "name": "lacchi shemai",
-    "price": 35,
-    "product-quantity": 50,
+    "img": "https://chaldn.com/_mpimage/muskan-salt-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D94913&q=best&v=1",
+    "name": "muskan salt",
+    "group": "sa",
+    "price": 60,
+    "product_quantity": 50,
+    "measurement": 250
+  },
+  {
+    "img": "https://chaldn.com/_mpimage/muskan-salt-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D94913&q=best&v=1",
+    "name": "muskan salt",
+    "group": "sa",
+    "price": 60,
+    "product_quantity": 50,
     "measurement": 250
   }
 ]

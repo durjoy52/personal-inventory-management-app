@@ -4,7 +4,7 @@ import Card from '../Card/Card';
 const PranGroup = () => {
     const [products,setProducts] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/pranGroup')
+        fetch('http://localhost:5000/products/pran')
         .then(res=>res.json())
         .then(data => setProducts(data))
     },[])
