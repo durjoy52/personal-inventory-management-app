@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home/Home";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/pran" element={<PranGroup/>}></Route>
         <Route path="/sa" element={<SaGroup/>}></Route>
       </Routes>
+        <Toaster />
     </>
   );
 }
