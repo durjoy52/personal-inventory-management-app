@@ -13,6 +13,9 @@ const Navbar = () => {
       <li className="pr-2 font-semibold">
         <NavLink to="/sa">S.A Group</NavLink>
       </li>
+      <li className="pr-2 font-semibold">
+        <NavLink to="/add">Add</NavLink>
+      </li>
     </>
   );
   return (

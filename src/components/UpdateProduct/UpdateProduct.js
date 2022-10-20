@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { toast } from 'react-hot-toast';
+import { toast } from "react-hot-toast";
 import { useParams } from "react-router-dom";
 const UpdateProduct = () => {
   const [product, setProduct] = useState();
@@ -29,13 +29,13 @@ const UpdateProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data?.modifiedCount > 0){
-          toast.success('product successfully updated',{id:'update'})
-        }else{
-          toast.error('update failed',{id:'error'})
+        if (data?.modifiedCount > 0) {
+          toast.success("product successfully updated", { id: "update" });
+        } else {
+          toast.error("update failed", { id: "error" });
         }
       });
-      e.target.reset()
+    e.target.reset();
   };
 
   return (
