@@ -16,10 +16,13 @@ const Navbar = () => {
       <li className="pr-2 font-semibold">
         <NavLink to="/add">Add</NavLink>
       </li>
+      <li className="pr-2 font-semibold">
+        <NavLink to="/manageProducts">Manage Products</NavLink>
+      </li>
     </>
   );
   return (
-    <div className="navbar bg-gradient-to-r from-cyan-200 to-blue-300 container mx-auto rounded sticky top-0 z-10 opacity-[.95]">
+    <div className="navbar bg-gradient-to-r from-cyan-200 to-blue-300 container mx-auto rounded sticky top-0 z-20 opacity-[.95] mb-5">
       <div className="navbar-start md:hidden">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">

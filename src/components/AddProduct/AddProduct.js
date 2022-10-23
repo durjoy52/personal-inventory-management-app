@@ -1,4 +1,5 @@
 import React from "react";
+import toast from "react-hot-toast";
 
 const AddProduct = () => {
   const addProduct = (event) => {
@@ -9,7 +10,23 @@ const AddProduct = () => {
     const measurement = event.target.measurement.value;
     const img = event.target.img.value;
     const group = event.target.group.value;
-    console.log(group)
+    const product = {name,price,product_quantity,measurement,group,img}
+    fetch('http://localhost:5000/product',{
+      method:"POST",
+      headers:{
+        "Content-type":"application/json"
+      },
+      body:JSON.stringify(product)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      if(data?.insertedId){
+        toast.success("successfully product added")
+      }else{
+        toast.error("failed to add product")
+      }
+      event.target.reset()
+    })
   };
 
   return (
@@ -25,8 +42,8 @@ const AddProduct = () => {
                     <option disabled defaultValue>
                        Select Group
                     </option>
-                    <option value="sa">S.A GROUP</option>
-                    <option value="pran">PRAN GROUP</option>
+                    <option value="pran">POWER GROUP</option>
+                    <option value="sa">MUSKAN GROUP</option>
                   </select>
                 </div>
               </div>
