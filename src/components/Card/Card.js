@@ -11,9 +11,9 @@ const Card = ({product}) => {
   <div className="card-body bg-slate-300">
     <h2 className="card-title uppercase font-bold">{name}</h2>
     <div className="grid grid-cols-2 gap-4">
-    <p>Price: <span className='text-xl font-bold text-amber-400'>{price}</span> Taka</p>
-    <p>product: {product_quantity} pieces</p>
-    <p>Measurement: {measurement} gram</p>
+    <p>Price: <span className='text-xl font-bold text-violet-800'>{price}</span> Taka</p>
+    <p>product: {product_quantity}</p>
+    <p>Measurement: {measurement}</p>
     </div>
     <div className="card-actions">
       <Link to={`/update/${_id}`} className="btn btn-primary bg-cyan-600 border-none hover:bg-sky-700 w-full">Update Now</Link>

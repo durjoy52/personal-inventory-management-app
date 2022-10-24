@@ -4,8 +4,8 @@ import "./App.css";
 import AddProduct from './components/AddProduct/AddProduct';
 import Home from "./components/Home/Home";
 import ManageProducts from './components/ManageProducts/ManageProducts';
-import PranGroup from "./components/PranGroup/PranGroup";
-import SaGroup from "./components/SaGroup/SaGroup";
+import MuskanGroup from './components/MuskanGroup/MuskanGroup';
+import PowerGroup from './components/PowerGroup/PowerGroup';
 import Navbar from "./components/Shared/Navbar/Navbar";
 import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
 
@@ -19,8 +19,8 @@ function App() {
         <Route path="/add" element={<AddProduct/>}></Route>
         <Route path="update/:id" element={<UpdateProduct/>}></Route>
         <Route path="manageProducts" element={<ManageProducts/>}></Route>
-        <Route path="/pran" element={<PranGroup/>}></Route>
-        <Route path="/sa" element={<SaGroup/>}></Route>
+        <Route path="/power" element={<PowerGroup/>}></Route>
+        <Route path="/muskan" element={<MuskanGroup/>}></Route>
       </Routes>
         <Toaster />
     </>

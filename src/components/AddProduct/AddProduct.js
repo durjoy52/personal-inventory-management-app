@@ -11,7 +11,7 @@ const AddProduct = () => {
     const img = event.target.img.value;
     const group = event.target.group.value;
     const product = {name,price,product_quantity,measurement,group,img}
-    fetch('http://localhost:5000/product',{
+    fetch('https://enigmatic-chamber-33250.herokuapp.com/product',{
       method:"POST",
       headers:{
         "Content-type":"application/json"
@@ -42,8 +42,8 @@ const AddProduct = () => {
                     <option disabled defaultValue>
                        Select Group
                     </option>
-                    <option value="pran">POWER GROUP</option>
-                    <option value="sa">MUSKAN GROUP</option>
+                    <option value="power">POWER GROUP</option>
+                    <option value="muskan">MUSKAN GROUP</option>
                   </select>
                 </div>
               </div>
@@ -69,7 +69,7 @@ const AddProduct = () => {
                 required
               />
               <input
-                type="number"
+                type="text"
                 name="measurement"
                 placeholder="measurement"
                 className="input border-none input-accent w-full max-w-xs"

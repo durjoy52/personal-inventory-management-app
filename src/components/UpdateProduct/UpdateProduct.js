@@ -6,7 +6,7 @@ const UpdateProduct = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://enigmatic-chamber-33250.herokuapp.com/product/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -19,7 +19,7 @@ const UpdateProduct = () => {
     const product_quantity = e.target.pieces.value;
     const measurement = e.target.measurement.value;
 
-    fetch(`http://localhost:5000/product/${id}`, {
+    fetch(`https://enigmatic-chamber-33250.herokuapp.com/product/${id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",

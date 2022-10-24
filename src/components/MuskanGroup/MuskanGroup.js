@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 
-const PranGroup = () => {
+const MuskanGroup = () => {
     const [products,setProducts] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/products/pran')
+        fetch('https://enigmatic-chamber-33250.herokuapp.com/products/muskan')
         .then(res=>res.json())
         .then(data => setProducts(data))
     },[])
@@ -20,4 +20,4 @@ const PranGroup = () => {
     );
 };
 
-export default PranGroup;
+export default MuskanGroup;

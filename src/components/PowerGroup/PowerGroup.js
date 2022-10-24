@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 
-const SaGroup = () => {
+const PowerGroup = () => {
     const [products,setProducts] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/products/sa')
+        fetch('https://enigmatic-chamber-33250.herokuapp.com/products/power')
         .then(res=>res.json())
         .then(data => setProducts(data))
     },[])
@@ -20,4 +20,4 @@ const SaGroup = () => {
     );
 };
 
-export default SaGroup;
+export default PowerGroup;

@@ -8,7 +8,7 @@ const ManageProducts = () => {
   const [deletingProduct, setDeletingProduct] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://enigmatic-chamber-33250.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -17,7 +17,7 @@ const ManageProducts = () => {
 
 
   const handleDelete = (id) =>{
-    fetch(`http://localhost:5000/${id}`,{
+    fetch(`https://enigmatic-chamber-33250.herokuapp.com/product/${id}`,{
         method:"DELETE"
     })
     .then(res=>res.json())
@@ -25,6 +25,8 @@ const ManageProducts = () => {
         if(data.deletedCount > 0){
             toast.success("product has been deleted")
             setDeletingProduct(null)
+            const remaining = products.filter(product=> product._id !== id)
+            setProducts(remaining)
         }
     })
   }

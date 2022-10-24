@@ -8,10 +8,10 @@ const Navbar = () => {
         <NavLink to="/home">Home</NavLink>
       </li>
       <li className="pr-2 font-semibold">
-        <NavLink to="/pran">Pran Group</NavLink>
+        <NavLink to="/power">Power Group</NavLink>
       </li>
       <li className="pr-2 font-semibold">
-        <NavLink to="/sa">S.A Group</NavLink>
+        <NavLink to="/muskan">Muskan Group</NavLink>
       </li>
       <li className="pr-2 font-semibold">
         <NavLink to="/add">Add</NavLink>
