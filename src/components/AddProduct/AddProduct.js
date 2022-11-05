@@ -1,7 +1,10 @@
 import React from "react";
+import { useAuthState } from 'react-firebase-hooks/auth';
 import toast from "react-hot-toast";
+import { auth } from "../../firebase.init";
 
 const AddProduct = () => {
+  const [user] = useAuthState(auth)
   const addProduct = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -10,7 +13,9 @@ const AddProduct = () => {
     const measurement = event.target.measurement.value;
     const img = event.target.img.value;
     const group = event.target.group.value;
-    const product = {name,price,product_quantity,measurement,group,img}
+    const totalPrice = price * product_quantity
+    const email = user.email
+    const product = {name,price,product_quantity,measurement,totalPrice,group,img,email}
     fetch('https://enigmatic-chamber-33250.herokuapp.com/product',{
       method:"POST",
       headers:{
@@ -30,7 +35,6 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="container mx-auto mt-5 h-screen">
       <div className="flex justify-center items-center h-full">
         <div className="card card-normal w-80 md:w-96 bg-base-100 shadow-xl">
           <div className="card-body bg-stone-200">
@@ -89,7 +93,6 @@ const AddProduct = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

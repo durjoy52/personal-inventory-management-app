@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { auth } from "../../firebase.init";
 import DeleteConfirmModal from "./DeleteConfirmModal";
 
 const ManageProducts = () => {
   const [products, setProducts] = useState([]);
   const [deletingProduct, setDeletingProduct] = useState(null);
-
-  useEffect(() => {
-    fetch("https://enigmatic-chamber-33250.herokuapp.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, []);
+  const [user,loading] = useAuthState(auth)
+  useEffect(()=>{
+    fetch('https://enigmatic-chamber-33250.herokuapp.com/products')
+    .then(res=>res.json())
+    .then(data => {
+        const filter = data.filter(product=> product.email === user?.email)
+        if(loading){
+            return <div className='bg-red-500 text-green-300 absolute top-52'><p>Loading...</p></div>
+        }
+        setProducts(filter)
+    })
+},[user,loading])
 
 
   const handleDelete = (id) =>{
@@ -32,10 +38,9 @@ const ManageProducts = () => {
   }
 
   return (
-    <div className="container mx-auto">
       <div className="overflow-x-auto">
         <table className="table w-full">
-          <thead>
+          <thead className="border-b-2 text-gray-600">
             <tr>
               <th></th>
               <th>Name</th>
@@ -55,23 +60,22 @@ const ManageProducts = () => {
                 <th>
                   <Link
                     to={`/update/${product?._id}`}
-                    className="btn btn-xs btn-primary bg-cyan-600 border-none hover:bg-sky-700"
+                    className="btn btn-xs btn-primary bg-cyan-100 border-none hover:bg-sky-200 text-sky-500 rounded-full"
                   >
                     Update
                   </Link>
                 </th>
                 <th>
-                  <label onClick={()=>setDeletingProduct(product)} htmlFor="delete-modal" className="btn btn-xs btn-error border-none text-white">Delete</label>
+                  <label onClick={()=>setDeletingProduct(product)} htmlFor="delete-modal" className="btn btn-xs hover:bg-red-200 bg-red-300 border-none rounded-full text-red-500">Delete</label>
                 </th>
               </tr>
             ))}
           </tbody>
         </table>
+        {
+           deletingProduct && <DeleteConfirmModal handleDelete={handleDelete} deletingProduct={deletingProduct} />
+        }
       </div>
- {
-    deletingProduct && <DeleteConfirmModal handleDelete={handleDelete} deletingProduct={deletingProduct} />
- }
-    </div>
   );
 };
 
