@@ -47,7 +47,7 @@ const UpdateProduct = () => {
       <div className="flex justify-center items-center h-full">
         <div className="card card-normal w-80 lg:w-1/2 lg:card-side bg-base-100 shadow-xl">
           <figure>
-            <img className="w-80 lg:w-96" src={product?.image} alt="Album" />
+            <img className="w-80 lg:w-96" src={product?.image} alt="Alo" />
           </figure>
           <div className="card-body bg-stone-200">
             <form onSubmit={updateProduct} className="grid gap-4">
