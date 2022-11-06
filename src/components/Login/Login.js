@@ -12,10 +12,18 @@ const Login = () => {
     navigate(from, { replace: true });
   }
   return (
-    <div>
-      <button className="btn btn-primary" onClick={() => signInWithGoogle()}>
-        <img className="w-10" src={googleLogo} alt="" /> google
-      </button>
+    <div className="container mx-auto flex justify-center">
+      <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card-body">
+        <div className="divider">OR</div>
+          <button
+            className="btn btn-ghost btn-active"
+            onClick={() => signInWithGoogle()}
+          >
+            <img className="w-10" src={googleLogo} alt="" /> google
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

@@ -2,8 +2,8 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import { RiImageAddLine } from "react-icons/ri";
 import { auth } from "../../firebase.init";
-
 const AddProduct = () => {
   const {
     register,
@@ -99,10 +99,12 @@ const AddProduct = () => {
               })}
             />
             <p className="text-error">{errors.measurement?.message}</p>
+            <label className="btn btn-active btn-ghost" htmlFor="img"><RiImageAddLine/>  upload image</label>
             <input
               type="file"
+              id="img"
               placeholder="image"
-              className="input border-none input-accent w-full max-w-xs"
+              className="input border-none input-accent w-full max-w-xs hidden"
               {...register("image", { required: "Image is required" })}
             />
             <p className="text-error">{errors.image?.message}</p>
