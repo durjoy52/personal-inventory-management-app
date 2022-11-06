@@ -38,11 +38,13 @@ const ManageProducts = () => {
   }
 
   return (
+    <div>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead className="border-b-2 text-gray-600">
             <tr>
               <th></th>
+              <th>Image</th>
               <th>Name</th>
               <th>Quantity</th>
               <th>Measurement</th>
@@ -54,8 +56,13 @@ const ManageProducts = () => {
             {products.map((product, index) => (
               <tr key={index}>
                 <th>{index + 1}</th>
+                <th><div className="avatar">
+    <div className="w-10 rounded">
+      <img src={product.image} alt="product_img" />
+    </div>
+  </div></th>
                 <th>{product?.name}</th>
-                <th>{product?.product_quantity}</th>
+                <th>{product?.piece}</th>
                 <th>{product?.measurement}</th>
                 <th>
                   <Link
@@ -72,10 +79,11 @@ const ManageProducts = () => {
             ))}
           </tbody>
         </table>
+      </div>
         {
            deletingProduct && <DeleteConfirmModal handleDelete={handleDelete} deletingProduct={deletingProduct} />
         }
-      </div>
+    </div>
   );
 };
 

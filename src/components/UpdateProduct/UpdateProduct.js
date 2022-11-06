@@ -16,15 +16,20 @@ const UpdateProduct = () => {
   const updateProduct = (e) => {
     e.preventDefault();
     const price = e.target.price.value;
-    const product_quantity = e.target.pieces.value;
+    const piece = e.target.pieces.value;
     const measurement = e.target.measurement.value;
-
+    const totalPrice = price * piece;
     fetch(`https://enigmatic-chamber-33250.herokuapp.com/product/${id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({ price, product_quantity, measurement }),
+      body: JSON.stringify({
+        price,
+        piece,
+        measurement,
+        totalPrice,
+      }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -63,13 +68,15 @@ const UpdateProduct = () => {
                 required
               />
               <input
-                type="number"
+                type="text"
                 name="measurement"
                 placeholder="measurement"
                 className="input border-none input-accent w-full max-w-xs"
                 required
               />
-              <button className="btn btn-accent font-bold">Button</button>
+              <button className="btn btn-primary bg-indigo-500 font-bold">
+                Update
+              </button>
             </form>
           </div>
         </div>

@@ -3,9 +3,9 @@ import React from 'react';
 const DeleteConfirmModal = ({handleDelete,deletingProduct}) => {
     const {name,_id,group} = deletingProduct
     return (
-        <div>
+        <>
             <input type="checkbox" id="delete-modal" className="modal-toggle" />
-<div className="modal modal-bottom sm:modal-middle">
+<div className="modal modal-middle">
   <div className="modal-box">
     <h3 className="font-bold text-lg">{name}</h3>
     <p className="py-4">Are you sure to delete the {name} product of group {group}</p>
@@ -15,7 +15,7 @@ const DeleteConfirmModal = ({handleDelete,deletingProduct}) => {
     </div>
   </div>
 </div>
-        </div>
+        </>
     );
 };
 

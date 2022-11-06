@@ -10,6 +10,7 @@ import PowerGroup from './components/PowerGroup/PowerGroup';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Navbar from "./components/Shared/Navbar/Navbar";
 import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
+import UserProfile from './components/UserProfile/UserProfile';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="update/:id" element={<RequireAuth><UpdateProduct/></RequireAuth>}></Route>
         <Route path="dashboard" element={<RequireAuth><Dashboard/></RequireAuth>}>
+        <Route index element={<UserProfile/>}></Route>
         <Route path="add" element={<AddProduct/>}></Route>
         <Route path="manageProducts" element={<RequireAuth><ManageProducts/></RequireAuth>}></Route>
         </Route>

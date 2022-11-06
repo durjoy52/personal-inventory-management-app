@@ -1,10 +1,11 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, NavLink } from "react-router-dom";
+import { MdSpaceDashboard } from "react-icons/md";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { auth } from "../../../firebase.init";
-
 const Navbar = () => {
+  const {pathname} = useLocation()
   const [user] = useAuthState(auth)
   const navItems = (
     <>
@@ -62,12 +63,23 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className="navbar-center md:navbar-start">
+      <div className="navbar-center lg:navbar-start">
         <Link to='/' className="btn btn-ghost normal-case text-xl font-serif"><em>M/S G.M Enterprise</em></Link>
       </div>
-      <div className="hidden md:flex md:flex-none navbar-end">
+      <div className="hidden md:flex lg:navbar-end">
         <ul className="menu menu-horizontal p-0">{navItems}</ul>
       </div>
+      {
+        pathname.includes('/dashboard') && 
+        <div className="navbar-end lg:hidden">
+        <label
+              htmlFor="dashboard-sidebar"
+              className=" drawer-button lg:hidden"
+              >
+              <MdSpaceDashboard className="text-2xl"/>
+            </label>
+        </div>
+      }
     </div>
   );
 };
