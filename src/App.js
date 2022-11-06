@@ -25,8 +25,8 @@ function App() {
         <Route path="add" element={<AddProduct/>}></Route>
         <Route path="manageProducts" element={<RequireAuth><ManageProducts/></RequireAuth>}></Route>
         </Route>
-        <Route path="/power" element={<PowerGroup/>}></Route>
-        <Route path="/muskan" element={<MuskanGroup/>}></Route>
+        <Route path="/power" element={<RequireAuth><PowerGroup/></RequireAuth>}></Route>
+        <Route path="/muskan" element={<RequireAuth><MuskanGroup/></RequireAuth>}></Route>
         <Route path='/login' element={<Login/>}></Route>
       </Routes>
         <Toaster />
