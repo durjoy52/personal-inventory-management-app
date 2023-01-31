@@ -4,6 +4,7 @@ import AddProduct from './components/AddProduct/AddProduct';
 import Dashboard from './components/Dashboard/Dashboard';
 import Home from "./components/Home/Home";
 import Login from './components/Login/Login';
+import Register from './components/Login/Register';
 import ManageProducts from './components/ManageProducts/ManageProducts';
 import MuskanGroup from './components/MuskanGroup/MuskanGroup';
 import PowerGroup from './components/PowerGroup/PowerGroup';
@@ -28,6 +29,7 @@ function App() {
         <Route path="/power" element={<RequireAuth><PowerGroup/></RequireAuth>}></Route>
         <Route path="/muskan" element={<RequireAuth><MuskanGroup/></RequireAuth>}></Route>
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/register' element={<Register/>}></Route>
       </Routes>
         <Toaster />
     </>

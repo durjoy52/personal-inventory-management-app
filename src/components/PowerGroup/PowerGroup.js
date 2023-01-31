@@ -13,7 +13,7 @@ const PowerGroup = () => {
         .then(data => {
             const filter = data.filter(product=> product.email === email)
             if(loading){
-                return <div className='bg-red-500 text-green-300 absolute top-52'><p>Loading...</p></div>
+                return <progress className="progress w-56"></progress>
             }
             setProducts(filter)
         })
